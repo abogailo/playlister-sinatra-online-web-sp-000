@@ -1,7 +1,9 @@
+
 module Slugifiable
-  module ClassMethod
+
+   module ClassMethod
     def find_by_slug(slug)
-      result = self.all.select {|elem| elem.slug == slug }.first
+      self.all.find{|obj| obj.slug == slug}
     end
   end
 
@@ -10,4 +12,5 @@ module Slugifiable
       self.name.downcase.gsub(" ", "-")
     end
   end
-end
+
+ end
