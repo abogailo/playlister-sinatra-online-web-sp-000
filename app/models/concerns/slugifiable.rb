@@ -10,4 +10,4 @@ module Slugifiable
       self.name.downcase.gsub(" ", "-")
     end
   end
-end 
+end
